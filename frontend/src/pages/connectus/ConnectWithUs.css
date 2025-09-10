@@ -1,0 +1,80 @@
+.connect-section {
+  padding: 3rem 2rem;
+  background: #4b7063; /* background similar to screenshot */
+  text-align: center;
+}
+
+.connect-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout */
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 1.5rem;
+}
+
+/* Card styles */
+.connect-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  display: block;
+  height: 260px;
+}
+
+.connect-card-wide {
+  grid-column: 1 / -1; /* spans full width */
+  height: 320px;
+}
+
+.connect-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.connect-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+
+.connect-info {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.connect-icon {
+  font-size: 2rem;
+}
+
+.connect-name {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effects */
+.connect-card:hover .connect-img {
+  transform: scale(1.1);
+}
+
+.connect-card:hover .connect-overlay {
+  opacity: 0.9;
+}
