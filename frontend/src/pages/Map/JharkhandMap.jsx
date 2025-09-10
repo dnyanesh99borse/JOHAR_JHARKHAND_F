@@ -1,8 +1,7 @@
-
 import { useState, useEffect, useRef } from "react";
 import JharkhandSVG from "./assets/jharkhand1.svg";
 //================JHARKHAND DISTRICT MAPS===========================//
-import Deoghar from "./assets/allmaps/deoghar.png"; // demo district SVG
+import Deoghar from "./assets/allmaps/deoghar.png"; 
 import Ranchi from "./assets/allmaps/ranchi.png";
 import Bokaro from "./assets/allmaps/bokaro.png";
 import Chatra from "./assets/allmaps/chatra.png";
@@ -18,7 +17,7 @@ import image3 from "./assets/nat3.jpg";
 import "../Map/map.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const API_KEY = "6944e27ce136d371a9eee3df2c7906a8"; // <-- put your API key here
+const API_KEY = "6944e27ce136d371a9eee3df2c7906a8"; 
 
 export default function JharkhandMap() {
   const [open, setOpen] = useState(false);
@@ -83,13 +82,25 @@ export default function JharkhandMap() {
       coords: [23.3441, 85.3096],
       attractions: [image1, image2, image3],
     }
-    // ➝ You can add more districts here with title, desc, and img
   };
 
   const handleSelect = (district) => {
     setSelected(district);
     setOpen(false);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // Fetch weather when selected district changes
   useEffect(() => {
@@ -134,7 +145,11 @@ export default function JharkhandMap() {
         {open && (
           <ul className="dropdown-list">
             {districts.map((district, index) => (
-              <li key={index} className="dropdown-item" onClick={() => handleSelect(district)}>
+              <li 
+                key={index} 
+                className="dropdown-item" 
+                onClick={() => handleSelect(district)}
+              >
                 {district}
               </li>
             ))}
@@ -142,8 +157,7 @@ export default function JharkhandMap() {
         )}
       </div>
 
-      {/* Info + Weather +slicer*/}
-
+      {/* Info + Weather + slider */}
       <div className="infobox">
         <div className="maptitle">
           <p>{activeInfo.title}</p>
@@ -157,7 +171,6 @@ export default function JharkhandMap() {
           )}
         </div>
 
-        {/*--------------slider-------------------------------*/}
         {activeInfo.attractions && (
           <AttractionSlider images={activeInfo.attractions} />
         )}
@@ -165,9 +178,12 @@ export default function JharkhandMap() {
 
       {/* Map Image */}
       <div className="mapbox">
-        <img src={activeInfo.img} alt={`${selected} Map`} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+        <img 
+          src={activeInfo.img} 
+          alt={`${selected} Map`} 
+          style={{ width: "100%", height: "100%", objectFit: "contain" }} 
+        />
       </div>
     </div>
   );
 }
-

@@ -22,8 +22,6 @@ import GangaGhatSahibganjHome from "./registered-tour-operators/src/components/G
 import SilverArcadeHotelsHome from "./registered-tour-operators/src/components/SilverArcadeHotelsHome";
 import "./registered-tour-operators/src/index.css";
 import EcomHome from './components/jk_ecommerce/bajaarhome'
-//-----------------for react-bootstrap-------------------
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
