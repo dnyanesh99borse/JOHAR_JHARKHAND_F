@@ -1,80 +1,82 @@
 .connect-section {
-  padding: 3rem 2rem;
-  background: #4b7063; /* background similar to screenshot */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .connect-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2.5rem;
+  color: #793100;
 }
 
-/* Grid layout */
 .connect-grid {
+  width: 70vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 in first row */
+  gap: 1.5rem;
 }
 
-/* Card styles */
 .connect-card {
+  height: 30vh;
   position: relative;
   overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  cursor: pointer;
   display: block;
-  height: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.99);
+  transition: transform 0.3s ease;
 }
 
-.connect-card-wide {
-  grid-column: 1 / -1; /* spans full width */
-  height: 320px;
+.connect-card:hover {
+  transform: scale(1.02);
 }
 
 .connect-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
+  object-fit:fill;
+  transition: transform 0.4s ease;
 }
 
-.connect-overlay {
+.connect-card:hover .connect-img {
+  transform: scale(1.08);
+}
+
+.connect-header {
   position: absolute;
-  inset: 0;
-  opacity: 0;
+  top: 12px;
+  left: 12px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: opacity 0.4s ease;
-}
-
-.connect-info {
-  color: #fff;
-  text-align: center;
-  font-size: 1.2rem;
+  gap: 8px;
+  font-size: 0.95rem;
   font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  color: #fff;
 }
 
 .connect-icon {
   font-size: 2rem;
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.connect-card:hover .connect-icon {
+  text-shadow: 1px 2px 10px black;
+  transform: scale(1.5);
 }
 
 .connect-name {
-  font-size: 1rem;
-  letter-spacing: 0.5px;
+  color: #fff;
 }
 
-/* Hover Effects */
-.connect-card:hover .connect-img {
-  transform: scale(1.1);
-}
-
-.connect-card:hover .connect-overlay {
-  opacity: 0.9;
+/* Make YouTube appear in second row, aligned with grid */
+.youtube-card {
+  grid-column: span 3; /* stretches across full row */
+  width: 70vw;
+  justify-self: center;
 }

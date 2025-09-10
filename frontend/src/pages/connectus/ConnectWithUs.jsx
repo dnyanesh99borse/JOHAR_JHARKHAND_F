@@ -1,77 +1,79 @@
 import React from "react";
 import "./ConnectWithUs.css";
 
-// Import your images
-import fbImg from "../visualLibrary/assets/photos.jpg";
-import instaImg from "../visualLibrary/assets/photos.jpg";
-import twitterImg from "../visualLibrary/assets/photos.jpg";
-import ytImg from "../visualLibrary/assets/photos.jpg";
+import fbImg from "../connectus/assets/facebook1.jpg";
+import instaImg from "../connectus/assets/instagram1.jpg";
+import twitterImg from "../connectus/assets/twitter1.jpg";
+import ytImg from "../connectus/assets/youtube.jpg";
 
-// Import icons
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-
-const socialLinks = [
-  {
-    name: "Facebook",
-    icon: <FaFacebookF />,
-    img: fbImg,
-    url: "#",
-    color: "#1877f2",
-    type: "normal",
-  },
-  {
-    name: "Instagram",
-    icon: <FaInstagram />,
-    img: instaImg,
-    url: "#",
-    color: "#e4405f",
-    type: "normal",
-  },
-  {
-    name: "Twitter",
-    icon: <FaTwitter />,
-    img: twitterImg,
-    url: "#",
-    color: "#1da1f2",
-    type: "normal",
-  },
-  {
-    name: "Youtube",
-    icon: <FaYoutube />,
-    img: ytImg,
-    url: "#",
-    color: "#ff0000",
-    type: "wide", // mark YouTube as wide
-  },
-];
 
 const ConnectWithUs = () => {
   return (
     <section className="connect-section">
       <h2 className="connect-title">Connect With Us</h2>
       <div className="connect-grid">
-        {socialLinks.map((item, index) => (
-          <a
-            key={index}
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            className={`connect-card ${
-              item.type === "wide" ? "connect-card-wide" : ""
-            }`}
-          >
-            <img src={item.img} alt={item.name} className="connect-img" />
-            <div
-              className="connect-overlay"
-              style={{ backgroundColor: item.color }}
-            >
-              <div className="connect-info">
-                <span className="connect-icon">{item.icon}</span>
-                <span className="connect-name">{item.name}</span>
-              </div>
-            </div>
-          </a>
-        ))}
+        {/* Row 1 */}
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          className="connect-card"
+        >
+          <img src={fbImg} alt="Facebook" className="connect-img" />
+          <div className="connect-header">
+            <span className="connect-icon" style={{ color: "#1877f2" }}>
+              <FaFacebookF />
+            </span>
+            <span className="connect-name">Facebook</span>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          className="connect-card"
+        >
+          <img src={instaImg} alt="Instagram" className="connect-img" />
+          <div className="connect-header">
+            <span className="connect-icon" style={{ color: "#e4405f" }}>
+              <FaInstagram />
+            </span>
+            <span className="connect-name">Instagram</span>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          className="connect-card"
+        >
+          <img src={twitterImg} alt="Twitter" className="connect-img" />
+          <div className="connect-header">
+            <span className="connect-icon" style={{ color: "#1da1f2" }}>
+              <FaTwitter />
+            </span>
+            <span className="connect-name">Twitter</span>
+          </div>
+        </a>
+
+        {/* Row 2 (YouTube alone) */}
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          className="connect-card youtube-card"
+        >
+          <img src={ytImg} alt="Youtube" className="connect-img" />
+          <div className="connect-header">
+            <span className="connect-icon" style={{ color: "#ff0000" }}>
+              <FaYoutube />
+            </span>
+            <span className="connect-name">YouTube</span>
+          </div>
+        </a>
       </div>
     </section>
   );
