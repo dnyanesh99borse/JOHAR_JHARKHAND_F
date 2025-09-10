@@ -26,7 +26,7 @@ import VisualLibrary from "../visualLibrary/VisualLibrary.jsx";
 import plannerbg from "../Trip_Planner/assets/plannerbg6.mp4";
 import BusinessOpportunity from "../BusinessOpportunity/BusinessOpportunity.jsx";
 import ConnectWithUs from "../connectus/ConnectWithUs.jsx";
-
+import TouristDept from "../touristDept/TouristDept.jsx";
 
 const MicIcon = ({ isMuted }) => (
   <svg
@@ -161,6 +161,12 @@ export default function Home() {
         style={{ backgroundImage: `url(${gallerybg})` }}>
         <ConnectWithUs/>
       </div>
+
+      {/*=============================TOURISTDEPARTMENT============================*/}
+      <div className="tourDept">
+        <TouristDept/>
+      </div>
+      
     </div>
   );
 }
