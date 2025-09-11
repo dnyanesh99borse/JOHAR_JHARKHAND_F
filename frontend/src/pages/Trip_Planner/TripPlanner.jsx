@@ -35,7 +35,7 @@ export default function TripPlanner() {
           Set the dates and pick your activities – we’ll guide you through the rest.
         </p>
 
-        <button className="plan-btn">
+        <button className="planner-btn">
           Plan Trip Now <span className="arrow">→</span>
         </button>
       </div>

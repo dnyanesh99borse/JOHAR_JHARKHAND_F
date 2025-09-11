@@ -23,6 +23,8 @@ import SilverArcadeHotelsHome from "./registered-tour-operators/src/components/S
 import "./registered-tour-operators/src/index.css";
 import EcomHome from './components/jk_ecommerce/bajaarhome'
 
+import ChatBot from './components/jharkhand-ai-assistant/frontend/src/components/ChatBot.jsx'
+
 
 
 
@@ -50,6 +52,7 @@ export default function App() {
           <Route path="/rajmahal-fossil-park" element={<RajmahalFossilParkHome />} />
           <Route path="/ganga-ghat-sahibganj" element={<GangaGhatSahibganjHome />} />
           <Route path="/silver-arcade-hotels" element={<SilverArcadeHotelsHome />} />
+          <Route path="/chatbot" element={<ChatBot />} />
 
 <Route path="/johar-Bajaar" element={<EcomHome />} />
         </Routes>

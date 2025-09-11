@@ -343,3 +343,76 @@ body {
 .tourDept{
   background-color: whitesmoke;
 }
+
+
+/*==================== CHATBOT HOMEPAGE ICON STYLING =============================*/
+.chatassistant {
+  position: fixed;
+  bottom: 20px;          /* distance from bottom */
+  right: 20px;           /* distance from right */
+  z-index: 2000;         /* stays above other elements */
+}
+
+/* Floating circular button */
+.assistant-btn {
+  background: linear-gradient(135deg, #ff914d, #ff6a00);
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: visible;
+  padding: 20px;
+  animation: pulseGlow 2.2s infinite;
+}
+
+/* Hover effect */
+.assistant-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Bot icon */
+.botimage {
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+
+/* Notification red dot */
+.assistant-btn::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 3rem;
+  width: 12px;
+  height: 12px;
+  background: #ff2d2d;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 45, 45, 0.8);
+}
+
+/* Bubble glow animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 145, 77, 0.6),
+                0 0 0 8px rgba(255, 145, 77, 0.3),
+                0 0 0 16px rgba(255, 145, 77, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 145, 77, 0.2),
+                0 0 0 16px rgba(255, 145, 77, 0.05),
+                0 0 0 24px rgba(255, 145, 77, 0.0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 145, 77, 0);
+  }
+}
