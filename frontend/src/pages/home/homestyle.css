@@ -128,91 +128,35 @@ body {
   color: #fff;
 }
 
-.cta-btn {
-  background: #f97316;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-}
 
-.cta-btn:hover {
-  background: #ea580c;
-}
 
 .mic-btn {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 3rem;
   z-index: 20;
   background: transparent;
   border: none;
   cursor: pointer;
   transition: transform 0.2s;
+  scale: 1.5;
 }
 
 .mic-btn:hover {
   transform: scale(1.1);
+  color:orange
+}
+
+.mic-btn:active{
+  transform: scale(1.1);
+  color:orange
 }
 
 .mic-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
-.featured {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-}
-
-.featured-swiper {
-  padding-top: 1.5rem;
-}
-
-.cta-section {
-  width: 100%;
-  background: linear-gradient(to right, #fff7ed, #ffffff, #fff7ed);
-  padding: 5rem 1rem;
-}
-
-.cta-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: left;
-}
-
-.cta-container h3 {
-  font-size: 1.75rem;
-  color: #ea580c;
-  margin-bottom: 1rem;
-}
-
-.cta-container p {
-  color: #374151;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.cta-know {
-  display: inline-block;
-  background: #f97316;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.cta-know:hover {
-  background: #ea580c;
-}
 
 .Navbar {
   position: absolute;

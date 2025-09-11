@@ -233,6 +233,8 @@ import TouristDept from "../touristDept/TouristDept.jsx";
 import Footer from "../../components/Footer.jsx";
 
 import ChatBot from "../../components/jharkhand-ai-assistant/frontend/src/components/ChatBot.jsx"; // IMPORTANT: path to ChatBot
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+
 
 // MicIcon (clean functional component)
 const MicIcon = ({ isMuted }) => {
@@ -270,8 +272,9 @@ export default function Home() {
           <div className="hero-overlay"></div>
 
           <button onClick={toggleMute} className="mic-btn" aria-label="Toggle Video Audio">
-            <MicIcon isMuted={isMuted} />
+            {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
           </button>
+
 
           <div className="Navbar">
             <Navbar />
