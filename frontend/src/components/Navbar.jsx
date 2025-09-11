@@ -90,6 +90,7 @@ export default function Navbar() {
   const { hovered, bind } = useHover();
 
   const nav = [
+    { to: "/Login", label: "Login" },
     { to: "/destinations", label: "Destinations" },
     { to: "/experiences", label: "Experiences" },
     { to: "/plan-your-trip", label: "Plan Your Trip" },

@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 // import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 import Home from './pages/home/Home.jsx'
 import Destinations from './pages/Destinations'
 import DestinationDetail from './pages/DestinationDetail'
@@ -54,7 +54,7 @@ export default function App() {
 <Route path="/johar-Bajaar" element={<EcomHome />} />
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

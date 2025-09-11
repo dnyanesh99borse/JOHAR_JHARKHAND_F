@@ -6,6 +6,7 @@ import events from "../Events_Festivals/assets/events.jpg";
 import mapbg from "../Map/assets/mapbg1.png";
 import gallerybg from "../visualLibrary/assets/gallerybg1.png";
 import hotelsbg from "../home/images/hotelsbg.jpg";
+import footerbg from "../../assets/footerbg1.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -27,6 +28,7 @@ import plannerbg from "../Trip_Planner/assets/plannerbg6.mp4";
 import BusinessOpportunity from "../BusinessOpportunity/BusinessOpportunity.jsx";
 import ConnectWithUs from "../connectus/ConnectWithUs.jsx";
 import TouristDept from "../touristDept/TouristDept.jsx";
+import Footer from "../../components/Footer.jsx";
 
 const MicIcon = ({ isMuted }) => (
   <svg
@@ -165,6 +167,12 @@ export default function Home() {
       {/*=============================TOURISTDEPARTMENT============================*/}
       <div className="tourDept">
         <TouristDept/>
+      </div>
+
+      {/*=============================TOURISTDEPARTMENT============================*/}
+      <div className="tourDept"
+      style={{ backgroundImage: `url(${footerbg})` }}>
+        <Footer/>
       </div>
       
     </div>
