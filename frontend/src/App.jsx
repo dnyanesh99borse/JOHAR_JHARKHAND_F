@@ -26,6 +26,10 @@ import EcomHome from './components/jk_ecommerce/bajaarhome'
 import ChatBot from './components/jharkhand-ai-assistant/frontend/src/components/ChatBot.jsx'
 
 
+//--------------------------------OTHER PAGE HERE--------------------------------//
+import RanchiWaterfalls from './pages/topdestinations/RanchiWaterfalls.jsx'
+
+
 
 
 export default function App() {
@@ -53,6 +57,8 @@ export default function App() {
           <Route path="/ganga-ghat-sahibganj" element={<GangaGhatSahibganjHome />} />
           <Route path="/silver-arcade-hotels" element={<SilverArcadeHotelsHome />} />
           <Route path="/chatbot" element={<ChatBot />} />
+
+          <Route path="/ranchi-waterfalls" element={<RanchiWaterfalls />} />
 
 <Route path="/johar-Bajaar" element={<EcomHome />} />
         </Routes>

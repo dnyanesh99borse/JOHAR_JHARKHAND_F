@@ -10,21 +10,18 @@ html, body {
 }
 
 
+/*---------------for ranchiwaterfall and likewise pages----------------------*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-
-/* @import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root { color-scheme: light; }
-
-.container-p { @apply container px-4 sm:px-6 lg:px-8; }
-.section { @apply py-12 sm:py-16; }
-.section-title { @apply text-2xl sm:text-3xl font-bold tracking-tight; }
-.muted { @apply text-gray-600; }
-.card { @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow; }
- */
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
