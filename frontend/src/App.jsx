@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
-// import Navbar from './components/Navbar'
-// import Footer from './components/Footer'
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+
 import Home from './pages/home/Home.jsx'
 import Destinations from './pages/Destinations'
 import DestinationDetail from './pages/DestinationDetail'
@@ -30,12 +32,21 @@ import ChatBot from './components/jharkhand-ai-assistant/frontend/src/components
 import RanchiWaterfalls from './pages/topdestinations/RanchiWaterfalls.jsx'
 
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* <Navbar /> */}
+      <ScrollToTop /> 
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -60,7 +71,7 @@ export default function App() {
 
           <Route path="/ranchi-waterfalls" element={<RanchiWaterfalls />} />
 
-<Route path="/johar-Bajaar" element={<EcomHome />} />
+          <Route path="/johar-Bajaar" element={<EcomHome />} />
         </Routes>
       </main>
       {/* <Footer /> */}

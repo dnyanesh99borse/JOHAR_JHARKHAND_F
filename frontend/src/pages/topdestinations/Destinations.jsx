@@ -2,6 +2,8 @@
 import React, { useRef } from "react";
 import "./Destinations.css"; // external CSS
 import { ChevronLeft, ChevronRight } from "lucide-react"; //for backward and forward buttons
+import { useNavigate } from "react-router-dom";
+
 
 // import local image(s)
 import Netarhat from "../topdestinations/assets/Netarhat.png";
@@ -12,7 +14,6 @@ import Maithon_Dam from "../topdestinations/assets/Maithon_Dam.png";
 import Maluti_Temple from "../topdestinations/assets/Maluti_Temple.png";
 import Ranchi_Waterfalls from "../topdestinations/assets/ranchiwaterfall1.jpg";
 import { Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 const slides = [
     {

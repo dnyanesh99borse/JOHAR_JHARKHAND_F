@@ -1,0 +1,313 @@
+/* Container */
+.ranchi-container {
+    font-family: "Inter", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+}
+
+/* Tabs */
+.tabs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    background-color: rgb(234, 234, 234);
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #9e9d9d9f;
+    transition: background 0.3s;
+}
+
+.tab-button:hover {
+    background: #fd9152;
+}
+
+.tab-button.active {
+    background: #ea580c;
+    color: white;
+}
+
+.tab-content {
+    width: 80vw;
+    background: transparent;
+    border: 1px solid #f3f4f6;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tab-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: coral;
+    margin-bottom: 1rem;
+}
+
+.tab-text {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.75rem;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.map-frame {
+    width: 100%;
+    height: 24rem;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.map-note {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    width: 22rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Transport Section */
+.transport-section {
+    background: linear-gradient(to bottom right, #f9fafb, white);
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #1f2937;
+    letter-spacing: 0.05em;
+}
+
+.transport-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.transport-card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.transport-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    font-size: 1.875rem;
+}
+
+.icon-box.road {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.icon-box.train {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.icon-box.air {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.transport-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.transport-text {
+    color: #4b5563;
+    line-height: 1.5rem;
+}
+
+/* Attractions */
+.attractions-section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(234, 234, 234);
+}
+
+.attractions-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: coral;
+    margin-bottom: 1rem;
+}
+
+.attractions-grid {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 12rem;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.attractions-info{
+    line-height: 1.75rem;
+    padding: 0 12rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.attraction-info {
+    padding: 1rem;
+    color: rgb(51, 50, 50);
+}
+
+.font-semibold{
+    font-size: 1rem;
+    color: #cf4c00;
+}
+
+.attraction-info p{
+    color: rgb(87, 86, 86);
+}
+
+.attraction-card {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.attraction-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    scale: 1.9s;
+}
+
+.attraction-img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+/* Animation */
+.animate-fadeInUp {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.opacity-0 {
+    opacity: 0;
+    transform: translateY(30px);
+}
