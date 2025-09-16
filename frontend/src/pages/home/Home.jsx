@@ -267,9 +267,9 @@ export default function Home() {
   return (
     <div className="maincontainer w-screen">
       <div className="mainbody">
-        <section className="hero">
-          <video ref={videoRef} className="hero-video" src={heroVideo} autoPlay muted loop playsInline />
-          <div className="hero-overlay"></div>
+        <section className="mainhero">
+          <video ref={videoRef} className="mainhero-video" src={heroVideo} autoPlay muted loop playsInline />
+          <div className="mainherosec-overlay"></div>
 
           <button onClick={toggleMute} className="mic-btn" aria-label="Toggle Video Audio">
             {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}

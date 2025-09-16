@@ -29,7 +29,9 @@ import ChatBot from './components/jharkhand-ai-assistant/frontend/src/components
 
 
 //--------------------------------OTHER PAGE HERE--------------------------------//
-import RanchiWaterfalls from './pages/topdestinations/RanchiWaterfalls.jsx'
+import RanchiWaterfalls from './pages/topdestinations/RanchiWaterfalls.jsx';
+import MalutiTemples from './pages/topdestinations/MalutiTemples.jsx';
+import Netarhat from './pages/topdestinations/Netarhat.jsx';
 
 
 function ScrollToTop() {
@@ -68,8 +70,10 @@ export default function App() {
           <Route path="/ganga-ghat-sahibganj" element={<GangaGhatSahibganjHome />} />
           <Route path="/silver-arcade-hotels" element={<SilverArcadeHotelsHome />} />
           <Route path="/chatbot" element={<ChatBot />} />
+          <Route path="/netarhat" element={<Netarhat />} />
 
           <Route path="/ranchi-waterfalls" element={<RanchiWaterfalls />} />
+          <Route path="/maluti-temples" element={<MalutiTemples />} />
 
           <Route path="/johar-Bajaar" element={<EcomHome />} />
         </Routes>

@@ -379,12 +379,12 @@ export default function Footer() {
         {/* ---------------- Footer Info (contact, logo, visitor) ---------------- */}
         <div style={panelStyle(240)} className="mb-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm md:text-base space-y-4 md:space-y-0">
-            <div className="text-center md:text-left space-y-1 text-gray-700">
+            {/* <div className="text-center md:text-left space-y-1 text-gray-700">
               <p>Registered Office:</p>
               <p>Udyog Bhawan, Block No. 16, 4th Floor, Sector-11, Gandhinagar - 382010.</p>
               <p>Tel: 079-23977219 | Toll Free: 1800 203 1111</p>
               <p>Email: info@jharkhandtourism.com | CIN: U63040GJ1978SGC003047</p>
-            </div>
+            </div> */}
 
             <img
               src="https://www.joharjharkhand.org/wp-content/uploads/2024/04/JOHAR-JHARKHAND-LOGO-01.png"

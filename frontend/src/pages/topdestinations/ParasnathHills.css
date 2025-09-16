@@ -1,0 +1,198 @@
+/* ===========================
+   Parasnath Hills Styles
+   Consistent with Ranchi, Netarhat, Maluti
+=========================== */
+
+.ph-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+  margin-bottom: 3rem;
+}
+
+.ph-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ff7a00; /* Orange theme */
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+  gap: 1rem;
+}
+
+.tabs button {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #ff7a00;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.tabs button:hover {
+  background: #ff7a00;
+  color: #fff;
+}
+
+.tabs button.active {
+  background: #ff7a00;
+  color: #fff;
+}
+
+/* ---------- Tab Content ---------- */
+.tab-content {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Transport Section ---------- */
+.transport {
+  padding: 2rem;
+  background: #fdf5f0;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 1100px;
+}
+
+.transport h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #ff7a00;
+}
+
+.transport-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.transport .card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.transport .card:hover {
+  transform: translateY(-6px);
+}
+
+.transport .card h3 {
+  margin-bottom: 0.7rem;
+  color: #ff7a00;
+}
+
+/* ---------- Attractions ---------- */
+.attractions {
+  padding: 2rem;
+  text-align: center;
+}
+
+.attractions h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff7a00;
+}
+
+.attractions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attractions ul li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  background: #f9f9f9;
+  border-left: 5px solid #ff7a00;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.attractions ul li:hover {
+  background: #ffeede;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}

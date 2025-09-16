@@ -1,0 +1,221 @@
+/* MalutiTemples.css */
+
+.mt-section {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #fafafa;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: transform 6s ease;
+}
+
+.hero:hover .hero-image {
+  transform: scale(1.08);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tabs button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: #f0f0f0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background: #ff944d;
+  color: #fff;
+}
+
+.tabs .active {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* Tab Content */
+.tab-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 2rem;
+  line-height: 1.7;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Transport Section */
+.transport {
+  background: #fff;
+  padding: 2rem;
+  margin: 3rem auto;
+  border-radius: 16px;
+  max-width: 1100px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.transport h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ff6600;
+  text-align: center;
+}
+
+.transport-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 280px;
+  padding: 1.2rem;
+  background: #fdfdfd;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Attractions */
+.attractions {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.attractions h2 {
+  font-size: 1.8rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.attractions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attractions li {
+  padding: 0.6rem 0;
+  font-size: 1.05rem;
+  border-bottom: 1px dashed #ddd;
+  transition: color 0.3s ease;
+}
+
+.attractions li:hover {
+  color: #ff6600;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .transport-cards {
+    flex-direction: column;
+  }
+}

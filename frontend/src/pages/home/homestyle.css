@@ -53,7 +53,7 @@ body {
 
 
 
-.hero {
+.mainhero {
   position: relative;
   width: 100%;
   height: 70vh;
@@ -62,7 +62,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .hero {
+  .mainhero {
     height: 85vh;
   }
 }
@@ -83,7 +83,7 @@ body {
 }
 
 
-.hero {
+.mainhero {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -91,7 +91,7 @@ body {
   overflow: hidden;
 }
 
-.hero-video {
+.mainhero-video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -109,13 +109,13 @@ body {
 }
 
 
-.hero-overlay {
+.mainherosec-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
 }
 
-.hero-content {
+.mainhero-content {
   position: relative;
   z-index: 10;
   max-width: 960px;

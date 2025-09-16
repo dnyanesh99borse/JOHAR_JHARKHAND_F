@@ -9,6 +9,9 @@ html, body {
   overflow-x: hidden;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /*---------------for ranchiwaterfall and likewise pages----------------------*/
 @keyframes fadeInUp {

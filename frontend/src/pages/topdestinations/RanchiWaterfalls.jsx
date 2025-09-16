@@ -10,7 +10,7 @@ import jonhafall from "./assets/jonhafalls.jpg";
 import { FaBusAlt, FaTrain, FaPlaneDeparture } from "react-icons/fa";
 
 // Import CSS
-import "./RanchiWaterfalls.css";
+import "./TourismPlaces.css";
 
 export default function RanchiWaterfalls() {
     const [tab, setTab] = useState("about");

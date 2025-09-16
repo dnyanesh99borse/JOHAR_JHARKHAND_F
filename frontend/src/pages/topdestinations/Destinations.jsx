@@ -87,7 +87,7 @@ export default function Destinations() {
                             <div className="content">
                                 <h2 className="title">{s.title}</h2>
                                 <p className="description">{s.description}</p>
-                                <button onClick={() => navigate("/ranchi-waterfalls")}>Read More</button>
+                                <button onClick={() => navigate("/maluti-temples")}>Read More</button>
                             </div>
                         </li>
                     ))}

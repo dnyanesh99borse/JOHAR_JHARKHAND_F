@@ -1,0 +1,199 @@
+/* ===========================
+   Tourism Places Shared Styles
+   For Ranchi, Netarhat, Maluti, Parasnath
+   Orange Theme + Smooth Animations
+=========================== */
+
+/* Section fade-in */
+.place-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+  margin-bottom: 3rem;
+}
+
+.place-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Hero Section ---------- */
+.place-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.place-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.place-hero-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.place-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ff7a00;
+}
+
+.place-hero-subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* ---------- Tabs ---------- */
+.place-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+  gap: 1rem;
+}
+
+.place-tabs button {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #ff7a00;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.place-tabs button:hover {
+  background: #ff7a00;
+  color: #fff;
+}
+
+.place-tabs button.active {
+  background: #ff7a00;
+  color: #fff;
+}
+
+/* ---------- Tab Content ---------- */
+.place-tab-content {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Gallery */
+.place-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.place-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.place-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Transport Section ---------- */
+.place-transport {
+  padding: 2rem;
+  background: #fdf5f0;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 1100px;
+}
+
+.place-transport h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #ff7a00;
+}
+
+.place-transport-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.place-transport .card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.place-transport .card:hover {
+  transform: translateY(-6px);
+}
+
+.place-transport .card h3 {
+  margin-bottom: 0.7rem;
+  color: #ff7a00;
+}
+
+/* ---------- Attractions ---------- */
+.place-attractions {
+  padding: 2rem;
+  text-align: center;
+}
+
+.place-attractions h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff7a00;
+}
+
+.place-attractions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.place-attractions ul li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  background: #f9f9f9;
+  border-left: 5px solid #ff7a00;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.place-attractions ul li:hover {
+  background: #ffeede;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .place-hero-title {
+    font-size: 2rem;
+  }
+  .place-hero-subtitle {
+    font-size: 1rem;
+  }
+}
