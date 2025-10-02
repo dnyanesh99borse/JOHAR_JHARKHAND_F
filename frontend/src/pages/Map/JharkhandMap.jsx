@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import JharkhandSVG from "./assets/jharkhand1.svg";
+import JharkhandSVG from "../../assets/j4.jpg";
 //================JHARKHAND DISTRICT MAPS===========================//
 import Deoghar from "./assets/allmaps/deoghar.png"; 
 import Ranchi from "./assets/allmaps/ranchi.png";

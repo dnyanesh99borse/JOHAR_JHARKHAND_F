@@ -441,7 +441,7 @@
 // src/components/ChatBot.jsx
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
-import "./ChatBot.css";
+import "./chatbot.css";
 
 import { FiSend } from "react-icons/fi";
 import { FaMicrophone, FaStop, FaPlane } from "react-icons/fa";

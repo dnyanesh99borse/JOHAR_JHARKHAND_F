@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 
 // import local image(s)
-import Netarhat from "../topdestinations/assets/Netarhat.png";
+import Netarhat from "../topdestinations/assets/netarhat.png";
 import Dalma_wildlife_Sanctuary from "../topdestinations/assets/dalmawildlife.png";
-import Dalma from "../topdestinations/assets/dalma.png";
+// import Dalma from "../topdestinations/assets/dalma.png";
 import Parasnath from "../topdestinations/assets/parasnath.png";
 import Maithon_Dam from "../topdestinations/assets/Maithon_Dam.png";
 import Maluti_Temple from "../topdestinations/assets/Maluti_Temple.png";

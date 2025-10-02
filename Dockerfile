@@ -1,3 +1,4 @@
+
 # # =========================
 # # Stage 1: Frontend
 # # =========================
@@ -60,23 +61,35 @@
 
 
 
+
+
+
+
 # =========================
-# Stage 1: Frontend
+# Stage 1: Frontend Build
 # =========================
-FROM node:18-alpine AS frontend-build
+FROM node:18-bullseye-slim AS frontend-build
 WORKDIR /app/frontend
 
-# Copy package files first (for caching)
+# Install build dependencies
+RUN apt-get update && \
+    apt-get install -y git python3 build-essential && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy package files first for caching
 COPY frontend/package*.json ./
 
-# Install dependencies
-RUN npm ci --silent
+# Install frontend dependencies
+RUN npm ci
 
 # Copy frontend source code
 COPY frontend/ ./
 
-# Expose Vite dev server port
-EXPOSE 5173
+# Optional: Set environment variables for Vite build (if any)
+# ENV VITE_API_URL=http://localhost:8000
+
+# Build frontend for production
+RUN npm run build
 
 # =========================
 # Stage 2: Backend
@@ -96,6 +109,9 @@ RUN apt-get update && \
 COPY backend/ ./
 COPY backend/requirements.txt ./requirements.txt
 
+# Copy frontend build from Stage 1
+COPY --from=frontend-build /app/frontend/dist ./frontend_dist
+
 # Upgrade pip and install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
@@ -103,5 +119,5 @@ RUN pip install -r requirements.txt
 # Expose backend port
 EXPOSE 8000
 
-# Run backend
+# Run backend with Gunicorn + Uvicorn worker
 CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:8000", "--workers", "2"]
