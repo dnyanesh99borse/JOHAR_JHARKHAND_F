@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import JharkhandSVG from "../../assets/j4.jpg";
+import Jharkhandmap from "../../assets/Jharkhand1.webp";
 //================JHARKHAND DISTRICT MAPS===========================//
-import Deoghar from "./assets/allmaps/deoghar.png"; 
+import Deoghar from "./assets/allmaps/deoghar.png";
 import Ranchi from "./assets/allmaps/ranchi.png";
 import Bokaro from "./assets/allmaps/bokaro.png";
 import Chatra from "./assets/allmaps/chatra.png";
@@ -17,7 +17,7 @@ import image3 from "./assets/nat3.jpg";
 import "../Map/map.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const API_KEY = "6944e27ce136d371a9eee3df2c7906a8"; 
+const API_KEY = "6944e27ce136d371a9eee3df2c7906a8";
 
 export default function JharkhandMap() {
   const [open, setOpen] = useState(false);
@@ -131,7 +131,7 @@ export default function JharkhandMap() {
   const activeInfo = districtInfo[selected] || {
     title: "🌿 Jharkhand — Where Nature Whispers, “Johar!”",
     desc: "Land of hills, sal forests, and sacred rivers, where every sunrise sings tribal songs of life. As the Santhals say — “Disom katha Johar!” 🤝✨",
-    img: JharkhandSVG
+    img: Jharkhandmap
   };
 
   return (
@@ -145,9 +145,9 @@ export default function JharkhandMap() {
         {open && (
           <ul className="dropdown-list">
             {districts.map((district, index) => (
-              <li 
-                key={index} 
-                className="dropdown-item" 
+              <li
+                key={index}
+                className="dropdown-item"
                 onClick={() => handleSelect(district)}
               >
                 {district}
@@ -178,10 +178,10 @@ export default function JharkhandMap() {
 
       {/* Map Image */}
       <div className="mapbox">
-        <img 
-          src={activeInfo.img} 
-          alt={`${selected} Map`} 
-          style={{ width: "100%", height: "100%", objectFit: "contain" }} 
+        <img
+          src={activeInfo.img}
+          alt={`${selected} Map`}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
         />
       </div>
     </div>
