@@ -65,5 +65,4 @@ frontend/.vite/
 *.backup
 *.orig
 
-# IT WILL ALSO AVOID THE STORAGE OF LARGE MP4 FILES AND HENCE STORE THAT ALL
-*.mp4
+
