@@ -15,7 +15,7 @@ const data = [
         image: modiji,
     },
     {
-        name: "Shri Amar Kumar Bauri",
+        name: "Shri Sudivya Kumar",
         designation: "Hon'ble Tourism Minister, Jharkhand",
         description: `Jharkhand, the land of forests, waterfalls, and tribal heritage, 
       is emerging as a soulful cultural and eco-tourism destination. 

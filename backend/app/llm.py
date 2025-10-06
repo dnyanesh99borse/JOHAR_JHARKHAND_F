@@ -1,6 +1,17 @@
+import os
 import requests
-from app.config import OPENAI_API_KEY, OPENAI_API_BASE, MODEL_ID, SYSTEM_PROMPT
-from app.config import MAX_TOKENS, TEMPERATURE, FALLBACK_MESSAGE_BUSY, FALLBACK_MESSAGE_UNAVAILABLE
+
+# Fallback messages
+FALLBACK_MESSAGE_BUSY = "⚠️ Server busy. Try again later."
+FALLBACK_MESSAGE_UNAVAILABLE = "⚠️ Server offline. Try again later."
+
+# Read settings from environment variables
+OPENAI_API_KEY = os.getenv("GROQ_API_KEY")  # Set this when running Docker
+OPENAI_API_BASE = os.getenv("OPENAI_API_BASE", "https://api.groq.com/openai/v1")  # default base URL
+MODEL_ID = os.getenv("MODEL_ID", "gpt-4")
+SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT", "You are a helpful assistant.")
+MAX_TOKENS = int(os.getenv("MAX_TOKENS", "500"))
+TEMPERATURE = float(os.getenv("TEMPERATURE", "0.7"))
 
 class LLMError(Exception):
     """Custom exception for LLM failures."""
@@ -11,6 +22,9 @@ def call_llm(prompt: str, max_tokens: int = MAX_TOKENS, temperature: float = TEM
     Calls the LLM API with the given prompt.
     Raises LLMError if request fails.
     """
+    if not OPENAI_API_KEY:
+        raise LLMError("API key not set in environment variables.")
+
     url = f"{OPENAI_API_BASE}/chat/completions"
     headers = {
         "Authorization": f"Bearer {OPENAI_API_KEY}",
@@ -35,7 +49,7 @@ def call_llm(prompt: str, max_tokens: int = MAX_TOKENS, temperature: float = TEM
         if response.status_code == 429:
             raise LLMError(FALLBACK_MESSAGE_BUSY)
         raise LLMError(f"HTTP error: {e}")
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException:
         raise LLMError(FALLBACK_MESSAGE_UNAVAILABLE)
     except (KeyError, IndexError) as e:
         raise LLMError(f"Unexpected response format: {e}")
@@ -49,6 +63,5 @@ def get_answer(query: str) -> str:
     try:
         return call_llm(prompt)
     except LLMError as e:
-        # Print for debugging/logging
         print("LLM Error:", e)
         return str(e)

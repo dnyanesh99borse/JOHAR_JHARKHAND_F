@@ -23,6 +23,12 @@ const slides = [
             "A sprawling sanctuary near Jamshedpur, Dalma is home to majestic elephants 🐘, leopards, deer, and rare birds. Trekking through its hills while soaking in panoramic views makes it a paradise for wildlife lovers & adventure seekers."
     },
     {
+        title: "Maluti Temples 🛕—",
+        image: Maluti_Temple,
+        description:
+            "A cluster of nearly 72 terracotta temples, Maluti is a hidden heritage gem near Dumka. Intricate carvings narrate epic tales of Ramayana & Mahabharata, reflecting the glorious art and devotion of medieval Bengal-Jharkhand traditions."
+    },
+    {
         title: "Ranchi Waterfalls 🌊—",
         image: Ranchi_Waterfalls,
         description:
@@ -33,12 +39,6 @@ const slides = [
         image: Netarhat,
         description:
             "“Queen of Jharkhand Hills”—is a serene hill station of pine forests, rolling plateaus & glowing sunrises. Santhal greetings of “Johar!” 🤝, tribal culture, and nearby Lodh Falls make it a perfect blend of nature & heritage."
-    },
-    {
-        title: "Maluti Temples 🛕—",
-        image: Maluti_Temple,
-        description:
-            "A cluster of nearly 72 terracotta temples, Maluti is a hidden heritage gem near Dumka. Intricate carvings narrate epic tales of Ramayana & Mahabharata, reflecting the glorious art and devotion of medieval Bengal-Jharkhand traditions."
     },
     {
         title: "Parasnath Hills ⛰️—",
